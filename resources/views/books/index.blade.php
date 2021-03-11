@@ -38,9 +38,9 @@
                     <td>{{ $item['created_at'] }}</td>
                     <td>{{ $item['updated_at'] }}</td>
                     <td>
-                        <form action="{{ route('books.destroy',$item->id) }}" method="POST">
-                            <a class="btn btn-info" href="{{ route('books.show',$item->id) }}">Show</a>
-                            <a class="btn btn-primary" href="{{ route('books.edit',$item->id) }}">Edit</a>
+                        <form action="{{ route('books.destroy', $item->id) }}" method="POST">
+                            <a class="btn btn-info" href="{{ route('books.show', $item->id) }}">Show</a>
+                            <a class="btn btn-primary" href="{{ route('books.edit', $item->id) }}">Edit</a>
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete</button>
@@ -52,3 +52,6 @@
     </table>
     {!! $data->links() !!}
 @endsection
+<div id="app">
+    <example-component></example-component>
+</div>

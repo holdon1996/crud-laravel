@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Basic;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,16 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('{any}', function () {
+    return view('layouts.app');
+})->where('any', '.*');
 
-Route::get('/basic/{id}', [Basic::class, 'show'])->middleware(['auth'])->name('basic');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-Route::resource('books', BookController::class);
+// Route::get('/basic/{id}', [Basic::class, 'show'])->middleware(['auth'])->name('basic');
+
+// Route::resource('books', BookController::class);
 
 require __DIR__.'/auth.php';
