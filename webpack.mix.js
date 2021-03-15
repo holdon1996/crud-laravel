@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 const mix = require('laravel-mix');
 
 /*

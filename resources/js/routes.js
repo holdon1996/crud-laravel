@@ -1,6 +1,8 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable import/prefer-default-export */
 import AllProduct from './components/AllProduct.vue';
 import EditProduct from './components/EditProduct.vue';
+import CreateProduct from './components/CreateProduct.vue';
 
 export const routes = [
   {
@@ -12,5 +14,10 @@ export const routes = [
     name: 'edit',
     path: '/edit/:id',
     component: EditProduct,
+  },
+  {
+    name: 'add',
+    path: '/add',
+    component: CreateProduct,
   },
 ];
